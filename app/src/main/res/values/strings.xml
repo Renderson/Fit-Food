@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fit Food</string>
+    <string name="search_recipe">Pesquisar receitas</string>
+    <string name="games">games</string>
+    <string name="apps">apps</string>
+    <string name="movies">movies</string>
+    <string name="books">books</string>
 </resources>

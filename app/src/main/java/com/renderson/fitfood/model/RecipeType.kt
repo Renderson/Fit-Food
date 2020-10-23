@@ -4,5 +4,7 @@ enum class RecipeType(val label: String) {
     FOR_YOU("For you"),
     TOP_CHARTS("Top charts"),
     PREMIUM("Premium"),
-    CATEGORIES("Categories")
+    POPULATE("Populate"),
+    TRIP("Trip"),
+    WEEK("Week"),
 }

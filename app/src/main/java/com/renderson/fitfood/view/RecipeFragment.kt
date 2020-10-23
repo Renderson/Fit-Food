@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
 import com.renderson.fitfood.R
+import com.renderson.fitfood.model.Data
+import com.renderson.fitfood.model.feed
 import com.renderson.fitfood.view.adapter.TopicRecipeVerticalAdapter
 
 class RecipeFragment : Fragment() {
@@ -26,5 +29,17 @@ class RecipeFragment : Fragment() {
 
         recipeVerticalAdapter = TopicRecipeVerticalAdapter()
         view.findViewById<RecyclerView>(R.id.rvVertical).adapter = recipeVerticalAdapter
+        requestJson()
+    }
+
+    private fun requestJson() {
+        Thread {
+            Thread.sleep(1000)
+            val feed = Gson().fromJson(feed(), Data::class.java)
+
+            activity?.runOnUiThread {
+                recipeVerticalAdapter?.add(feed.category)
+            }
+        }.start()
     }
 }

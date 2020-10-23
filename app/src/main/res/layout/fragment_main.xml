@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicator="@drawable/tab_item_selector"
+        app:tabIndicatorColor="@color/red_700"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="4dp"
         app:tabMode="scrollable"
         app:tabRippleColor="@null"
-        app:tabSelectedTextColor="@color/purple_700"
+        app:tabSelectedTextColor="@color/red_700"
         app:tabTextAppearance="@style/CustomTabTextAppearance" />
 
     <View
